@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+  - [Contributors](#contributors)
   - [Objective](#objective)
   - [Motivation](#motivation)
   - [Scope](#scope)
@@ -22,6 +23,14 @@
 # Carbon Emissions Analytics Dashboard
 
 ## Introduction
+
+### Contributors
+
+![Juyee Sabade](static/images/juyee.png)
+
+![Anuja Merawade](static/images/juyee.png)
+
+![Shivani Pal](static/images/shivani.png)
 
 ### Objective
 
