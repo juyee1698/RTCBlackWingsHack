@@ -163,7 +163,7 @@ The data from the API sources is extracted on lambda functions on a daily basis 
     
   **Aircraft Specification: Boeing 767-300ER**
   
-    | Aircraft Specification | Boeing 767-300ER        |
+    | Aircraft Specification | Boeing 767-300ER       |
     |------------------------|------------------------|
     | Fuel Capacity          | 16,700–24,140 US gal   |
     | Thrust                 | 252–274 kN             |
