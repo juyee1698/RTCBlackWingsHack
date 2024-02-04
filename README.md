@@ -24,13 +24,34 @@
 
 ## Introduction
 
-### Contributors
 
-![Juyee Sabade](static/images/juyee.png)
+## Contributors
 
-![Anuja Merawade](static/images/juyee.png)
+<div class="row" style="display: flex;">
+    <div class="column" style=" flex: 33.33%;">
+    <a href="[https://github.com/Contributor2](https://github.com/juyee1698)">
+        <img src="static/images/juyee.JPG" width="100" height="100" alt="Juyee Sabade" style="border-radius: 50%;">
+        <br>
+        <sub><b>Juyee Sabade</b></sub>
+    </a>
+    </div>
+    <div class="column" style=" flex: 33.33%;">
+    <a href="[https://github.com/Contributor1](https://github.com/human-doodle)">
+        <img src="static/images/shivani.jpg" width="100" height="100" alt="Shivani Pal" style="border-radius: 50%;">
+        <br>
+        <sub><b>Shivani Pal</b></sub>
+    </a>
+    </div>
+    <div class="column" style="flex: 33.33%;">
+    <a href="[https://github.com/ContributorN](https://github.com/juyee1698)">
+        <img src="static/images/anuja.png" width="100" height="100" alt="Anuja" style="border-radius: 50%;">
+        <br>
+        <sub><b>Anuja Merwade</b></sub>
+    </a>
+    </div>
+</div>
 
-![Shivani Pal](static/images/shivani.png)
+
 
 ### Objective
 
