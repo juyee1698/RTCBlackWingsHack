@@ -26,15 +26,15 @@ print("Response:", response)
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='AKIAZVCAYGILBL4DE3ZM',
-    aws_secret_access_key='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'
+    aws_access_key_id='',
+    aws_secret_access_key=''
 )
 
 s3_client = boto3.client(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='AKIAZVCAYGILBL4DE3ZM',
-    aws_secret_access_key='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'
+    aws_access_key_id='',
+    aws_secret_access_key=''
 )
 
 bucket_name = 'flight-departures'
