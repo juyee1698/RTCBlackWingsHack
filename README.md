@@ -41,6 +41,9 @@ The following features will be incorporated in the dashboard:
   - Aggregate the carbon footprint created by daily domestic flights running in the US through air traffic monitoring techniques and sophisticated methodologies to calculate greenhouse gas (CO2, Nitrogen Oxide, water vapors, etc.) emissions by considering factors such as distance traveled, number of passengers, cargo load, etc.
   - Compute the real-time aggregated carbon emissions based on the electricity consumption estimates of different US states.
 - Understand the correlation between fuel usage (Coal, Natural Gas, Petroleum) and CO2 emissions associated with different sectors such as Commercial, Industrial, Residential, etc.
+- NGO Interface
+  - Build an interface to influence sustainable and environmentally responsible initiatives on a government and organizational level, and direct funds to the right cause.
+  - This would educate the public on the ongoing climate change crisis through the massive amounts of carbon emissions being generated daily, and influence them to take sustainable actions on an individual/community level by collaborating with non-profit environmental organizations.
 
 ### Stakeholders
 
@@ -134,7 +137,7 @@ The data from the API sources is extracted on lambda functions on a daily basis 
       }
       ```
 
-- Step 2: Calculate the Distance Between Source and Destination Airport
+ - Step 2: Calculate the Distance Between Source and Destination Airport
   The distance between source and destination airports, obtained from the API, is calculated using geographical coordinates. The result is in kilometers.
   
   ```python
@@ -154,9 +157,9 @@ The data from the API sources is extracted on lambda functions on a daily basis 
       return R*c
   ```
 
-- Step 3: Calculate the Fuel Consumption of Each Flight Journey
+ - Step 3: Calculate the Fuel Consumption of Each Flight Journey
 
-    In aviation, fuel consumption is a complex calculation involving factors such as fuel type, aircraft engine type, geographical conditions, aircraft dimensions, seating capacity, cruise speed, thrust, efficiency, etc. Due to limitations in obtaining specific aviation data, we'll assume a standard aircraft type for all flights, considering the Boeing 767-300ER.
+   In aviation, fuel consumption is a complex calculation involving factors such as fuel type, aircraft engine type, geographical conditions, aircraft dimensions, seating capacity, cruise speed, thrust, efficiency, etc. Due to limitations in obtaining specific aviation data, we'll assume a standard aircraft type for all flights, considering the Boeing 767-300ER.
     
   **Aircraft Specification: Boeing 767-300ER**
   
@@ -231,29 +234,6 @@ The data from the API sources is extracted on lambda functions on a daily basis 
     return total_co2_emissions
 
   ```
-# CO2 Aggregate Emission by Fuel and Sector in US States
-
-For our third task, we will be obtaining data on carbon dioxide (CO2) emissions resulting from different fuels usage in various sectors. This data will be collected on a monthly basis. It will provide us with the total CO2 emissions, the specific time period during which these emissions occurred, and the sectors responsible for these emissions, along with the corresponding CO2 emission quantities.
-
-## Step 1: Fetch the data from below API
-
-API: [CO2 Emissions Aggregates API](https://api.eia.gov/v2/co2-emissions/co2-emissions-aggregates/data/?frequency=annual&data[0]=value&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=5000)
-
-### Sample API Response:
-
-```json
-{
-    "period": 2021,
-    "sectorId": "RC",
-    "sector-name": "Residential carbon dioxide emissions",
-    "fuelId": "PE",
-    "fuel-name": "Petroleum",
-    "stateId": "AL",
-    "state-name": "Alabama",
-    "value": 0.295148,
-    "value-units": "million metric tons of CO2"
-}
-```
 
 ### CO2 Aggregate Emission by Fuel and Sector in US States
 
