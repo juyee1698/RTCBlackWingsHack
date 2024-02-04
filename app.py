@@ -26,15 +26,15 @@ print("Response:", response)
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='',
-    aws_secret_access_key=''
+    aws_access_key_id='AKIAZVCAYGILBL4DE3ZM',
+    aws_secret_access_key='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'
 )
 
 s3_client = boto3.client(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='',
-    aws_secret_access_key=''
+    aws_access_key_id='AKIAZVCAYGILBL4DE3ZM',
+    aws_secret_access_key='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'
 )
 
 bucket_name = 'flight-departures'
@@ -360,14 +360,14 @@ def get_data():
                 emissions_df['date'] = date
                 emissions_df['month'] = month
                 emissions_df['week'] = week
-                #print(emissions_df)
+
                 
                 flight_emissions_df = pd.concat([flight_emissions_df,emissions_df],ignore_index=True)
                 #print(flight_emissions_df)
             except:
                 continue
         
-
+        
 
         monthly_statistics = flight_emissions_df.groupby('month')['CO2Emissions'].agg(total_emissions='sum',
                                                                                 max_emissions='max',
@@ -399,7 +399,7 @@ def get_data():
         # Computing Airport Statistics
 
         airport_statistics = flight_emissions_df.groupby(['month','departureAirportName'])['CO2Emissions'].agg(total_emissions='sum').reset_index()
-        month_order = ['May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+        month_order = ['Jan','Feb','Mar','Apr','May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov']
         airport_statistics['month'] = pd.Categorical(airport_statistics['month'], categories=month_order, ordered=True)
         airport_stats_pivot = pd.pivot_table(airport_statistics, values = 'total_emissions',
                                         index='departureAirportName',columns='month',aggfunc='sum')
@@ -474,7 +474,6 @@ def get_data():
     else:
         result = json.loads(result)
 
-    print(result)
     return jsonify(result)
 
 @app.route('/charts')
@@ -484,6 +483,10 @@ def charts():
 @app.route('/fuelemissions')
 def fuelemissions():
     return render_template('sector-fuel.html')
+
+@app.route('/ngo')
+def ngo():
+    return render_template('ngo.html')
 
 
 if __name__ == "__main__":

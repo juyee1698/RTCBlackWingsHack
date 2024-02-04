@@ -11,14 +11,14 @@
             .then(data => {
                 // Use data to render the chart using Chart.js
                 monthly_emissions = data.monthly_statistics;
-                console.log(monthly_emissions);
+                //console.log(monthly_emissions);
                 // single bar chart
                 var ctx = document.getElementById( "singelBarChart" );
                 ctx.height = 150;
                 var myChart = new Chart( ctx, {
                     type: 'bar',
                     data: {
-                        labels: [ "May","Jun","Jul","Aug","Sept","Oct","Nov" ],
+                        labels: [ "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept"],
                         datasets: [
                             {
                                 label: "Carbon Emissions (Million Metric Tonnes)",
@@ -47,7 +47,7 @@
                 var myChart = new Chart( ctx, {
                     type: 'line',
                     data: {
-                        labels: [ "May", "June", "July", "Aug", "Sept","Oct","Nov" ],
+                        labels: [ "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep"],
                         datasets: [
                             {
                                 label: "Max CO2 Emissions",
@@ -81,7 +81,6 @@
                 } );
 
                 airport_statistics = data.airport_statistics;
-                console.log(airport_statistics);
 
                 // Weekly total emissions
                 var ctx = document.getElementById( "weekly-emissions-chart" );
@@ -139,7 +138,7 @@
                                 scaleLabel: {
                                     display: false,
                                     labelString: 'Week'
-                                },
+                                }
                                 
                                     } ],
                             yAxes: [ {
@@ -162,9 +161,8 @@
 
                 //doughut chart
                 var ctx = document.getElementById( "doughutChart" );
-                
-
-                ctx.height = 150;
+                console.log(data.airport_emissions_percent);
+                ctx.height = 200;
                 var myChart = new Chart( ctx, {
                     type: 'doughnut',
                     data: {
@@ -210,7 +208,6 @@
                 } );
 
                 //Airport Emission comparison line chart
-                console.log(data.airport_comparison_stats);
                 var ctx = document.getElementById( "airport-comparison-chart" );
                 ctx.height = 150;
                 var multiLineChart = new Chart( ctx, {
@@ -310,7 +307,7 @@
                 var myChart = new Chart( ctx, {
                     type: 'bar',
                     data: {
-                        labels: [ "May","Jun","Jul","Aug","Sept","Oct","Nov" ],
+                        labels: [ "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep"],
                         datasets: [
                             {
                                 label: "Distance Covered (KM)",
