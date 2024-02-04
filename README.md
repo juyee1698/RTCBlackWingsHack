@@ -17,7 +17,7 @@
 - [Redis Caching](#redis-caching)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Demo] (#demo)
+- [Demo](#demo)
 
 # Carbon Emissions Analytics Dashboard
 
