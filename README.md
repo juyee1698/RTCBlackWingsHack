@@ -33,7 +33,7 @@
   <a href="[https://github.com/Contributor1](https://github.com/human-doodle)">
         <img src="static/images/shivani.jpg" width="200" height="200" alt="Juyee Sabade">
     </a>
-  <a href="[https://github.com/ContributorN](https://github.com/juyee1698)">
+  <a href="[(https://github.com/juyee1698)](https://github.com/anujamerwade)">
         <img src="static/images/anuja.png" width="200" height="200" alt="Anuja">
     </a>
 </p>
