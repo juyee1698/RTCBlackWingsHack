@@ -17,6 +17,7 @@
 - [Redis Caching](#redis-caching)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Demo] (#demo)
 
 # Carbon Emissions Analytics Dashboard
 
@@ -344,7 +345,7 @@ Include information on how to use the dashboard and any additional configuration
 
 ## Demo
 
-![Dashboard Demo](dashboard-ss.png)
+![Dashboard Demo](static/images/dashboard-ss.png)
 https://youtu.be/8Mc3Gi5IEwQ?si=OsZ1RQqgKtXzZpsQ
 
 
