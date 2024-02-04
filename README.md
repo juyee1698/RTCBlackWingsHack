@@ -337,8 +337,14 @@ We have implemented Redis for caching the result calculations during daily runs,
 
 Provide instructions on how to install and set up the project here.
 
+
 ## Usage
 
 Include information on how to use the dashboard and any additional configuration steps.
+
+## Demo
+
+![Dashboard Demo](dashboard-ss.png)
+https://youtu.be/8Mc3Gi5IEwQ?si=OsZ1RQqgKtXzZpsQ
 
 
