@@ -23,18 +23,21 @@ r = redis.Redis(host='192.168.56.70', port=6379, db=0)
 response = r.ping()
 print("Response:", response)
 
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='',
-    aws_secret_access_key=''
+    aws_access_key_id=config['aws_access_key_id'],
+    aws_secret_access_key=config['aws_secret_access_key']
 )
 
 s3_client = boto3.client(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='',
-    aws_secret_access_key=''
+    aws_access_key_id=config['aws_access_key_id'],
+    aws_secret_access_key=config['aws_secret_access_key']
 )
 
 bucket_name = 'flight-departures'
